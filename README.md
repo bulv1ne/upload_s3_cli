@@ -13,7 +13,8 @@ poetry install
 As the user with permissions to S3:
 
 ```
-python -m upload_s3_cli.generate_config --expires-in 3600 --s3-path s3://bucket/path/to/folder --config-out config.json
+export AWS_PROFILE=my-profile # Only needed if you're using different profiles
+poetry run python -m upload_s3_cli.generate_config --expires-in 3600 --s3-path s3://bucket/path/to/folder --config-out config.json
 ```
 
 Send the config.json file to the uploading user
@@ -21,5 +22,5 @@ Send the config.json file to the uploading user
 As the uploading user:
 
 ```
-python -m upload_s3_cli.upload_files --config config.json path/with/files
+poetry run python -m upload_s3_cli.upload_files --config config.json path/with/files
 ```
