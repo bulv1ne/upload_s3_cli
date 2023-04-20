@@ -1,5 +1,13 @@
 # upload_s3_cli
 
+## Installation
+
+```
+git clone https://github.com/bulv1ne/upload_s3_cli.git
+cd upload_s3_cli
+poetry install
+```
+
 ## Usage
 
 As the user with permissions to S3:
