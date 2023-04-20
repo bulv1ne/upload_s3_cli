@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "upload-s3-cli"
+version = "0.1.0"
+description = ""
+authors = ["Niels Lemmens <1936122+bulv1ne@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "upload_s3_cli"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+boto3 = "*"
+requests = "*"
+tqdm = "*"
+
+[tool.poetry.group.dev.dependencies]
+black = "*"
+flake8 = "*"
+isort = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
